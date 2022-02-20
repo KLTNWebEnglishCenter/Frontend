@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Simple lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+    <link rel="stylesheet" href="/css/page.css" />
+    <link rel="stylesheet" href="/css/header.css"/>
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <div class="anhdaidien">
+            <img src="/img/TOPAL.png" alt="Trung tam anh ngu topal" width="300px" height="100px">
+        </div>
+        <ul class="menu" id="menu">
+            <li class="nav-item">
+                <a href="#" class="nav-link" id="nav-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-item">
+                <a href="#stars" class="nav-link" id="nav-link">Các khóa học</a>
+            </li>
+            <li class="nav-item">
+                <a href="#stakeholders" class="nav-link" id="nav-link">Tài liệu</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sub" class="nav-link" id="nav-link">Tin tức</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sub" class="nav-link" id="nav-link">Góc học viên</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sub" class="nav-link" id="nav-link">Tuyển dụng</a>
+            </li>
+            <li class="nav-item">
+                <a href="#sub" class="nav-link" id="nav-link">Liên hệ</a>
+            </li>
+        </ul>
+        <div class="menuclick" id="menuclick" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </nav>
+
+    <script>
+        const inputToggle = document.querySelector('#checkbox')
+        const navMenu = document.getElementById("menu")
+        inputToggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark')
+        })
+        function myFunction(x) {
+            x.classList.toggle("change");
+            navMenu.classList.toggle("active");
+        }
+        const navLink = document.querySelectorAll("#nav-link");
+        const menuclick = document.getElementById('menuclick')
+        navLink.forEach((n) => n.addEventListener("click", closeMenu));
+        function closeMenu() {
+            menuclick.classList.remove("change")
+            navMenu.classList.remove("active");
+        }
+    </script>
+</body>
+</html>
