@@ -10,6 +10,7 @@
 
 .wrapper {
 	display: flex;
+	text-decoration: none;
 }
 
 .icon {

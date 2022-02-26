@@ -75,17 +75,33 @@ nav {
     top: 0;
     left: 0;
     z-index: 1;
+
+    height: 200px;
 }
 
   
-ul {
+.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     margin-right: 30px;
 }
+
+.menu2 {
+    display: none;
+    position: absolute;
+
+}
+
+.menu2 li a {
+    color: red;
+}
   
+.menu1:hover .menu2 {
+    display: block;
+   
+}
 .nav-item {
     margin-left: 2rem;
 }
