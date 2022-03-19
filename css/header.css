@@ -116,6 +116,10 @@ nav {
     font-weight: var(--bold-font);
 }
 
+.nav-link:hover {
+    color: red;
+}
+
 .checkbox {
     opacity: 0;
     position: absolute;
