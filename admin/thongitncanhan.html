@@ -20,6 +20,55 @@
   <link href="/admin/assets/css/sidebar-menu.css" rel="stylesheet" />
   <link href="/admin/assets/css/app-style.css" rel="stylesheet" />
   
+  <style>
+      .info-name {
+        position: absolute;
+        top: 250px;
+        left: 200px;
+      }
+      .info-name h1 {
+        font-size: 80px;
+        font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(126, 222, 176);
+        margin-bottom: 40px;
+      }
+
+      .info-image {
+        position: absolute;
+        top: 250px;
+        left: 1100px;
+      }
+
+      .info-image img {
+          width: 350px;
+          height: 500px;
+
+          border: 3px solid white;
+          border-radius: 10px;
+      }
+
+      .info-image h4 {
+          text-align: center;
+          color: black;
+      }
+
+      .info-introduces {
+        position: absolute;
+        top: 400px;
+        left: 200px; 
+      }
+
+      .info-introduces span {
+          font-size: 28px;
+          color: white;
+      }
+
+      .info-button {
+        position: absolute;
+        top: 550px;
+        left: 200px;  
+      }
+  </style>
 
 </head>
 
@@ -35,72 +84,14 @@
   </div>
   
  <div id="wrapper">
-  <div id="sidebar-wrapper" data-simplebar="" data-simplebar-auto-hide="true">
-    <div class="brand-logo">
-      <a href="/admin/index.html">
-        <img src="/admin/assets/images/logo-icon.png" class="logo-icon" alt="logo icon">
-        <h5 class="logo-text">TOPAL</h5>
-      </a>
-    </div>
-    <ul class="sidebar-menu do-nicescrol">
-      <li class="sidebar-header">MENU ADMIN</li>
-      <li>
-        <a href="/admin/index.html">
-          <i class="zmdi zmdi-view-dashboard"></i> <span>Lịch</span>
-        </a>
-      </li>
-      
-       <li>
-        <a href="/admin/admin.html">
-          <i class="zmdi zmdi-account-box"></i> <span>Quản lí Nhân viên</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/hocvien.html">
-          <i class="zmdi zmdi-accounts"></i> <span>Quản lí Học viên</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/giangvien.html">
-          <i class="zmdi zmdi-accounts"></i> <span>Quản lí Giảng viên</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/khoahoc.html">
-          <i class="zmdi zmdi-widgets"></i> <span>Quản lí Khóa học</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/khoahoc.html">
-          <i class="zmdi zmdi-widgets"></i> <span>Quản lí Lớp học</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/baidang.html">
-          <i class="zmdi zmdi-collection-bookmark"></i> <span>Quản lí Bài đăng</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="/admin/duyethocvien.html">
-          <i class="zmdi zmdi-assignment-check"></i> <span>Duyệt học viên</span>
-        </a>
-      </li>
-      <li>
-        <a href="/admin/duyetbaidang.html">
-          <i class="zmdi zmdi-assignment-check"></i> <span>Duyệt bài đăng</span>
-        </a>   
-      </li>
-    </ul>
-  </div>
     <header class="topbar-nav">
       <nav class="navbar navbar-expand fixed-top">
         <ul class="navbar-nav mr-auto align-items-center">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link toggle-menu" href="javascript:void();">
               <i class="icon-menu menu-icon"></i>
             </a>
-          </li>
+          </li> -->
         </ul>
 		
         <ul class="navbar-nav align-items-center right-nav-link">
@@ -124,7 +115,7 @@
               </li>
             
               <li class="dropdown-divider"></li>
-			 <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="/admin/logout"> Đăng xuất</a></li>		
+			        <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="/admin/logout"> Đăng xuất</a></li>		
             </ul>
           </li>
         </ul>
@@ -133,47 +124,32 @@
     <div class="clearfix"></div>
 
     <!-- Body -->
-    <div class="content-wrapper">
+    <div class="wrapper">
       <div class="container-fluid">
         <div class="row mt-3">
           <div class="col-lg-12">
-            <button class="add-catalog"><a href="/admin/addbaidang.html">Thêm bài đăng</a></button>
+            <button class="add-catalog"></button>
           </div> 
           <div class="col-lg-12">
             <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Danh sách Bài đăng</h5>
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Tên bài đăng</th>
-                        <th scope="col">Người tạo</th>
-                        <th scope="col">Ngày tạo</th>
-                        <th scope="col">Hành động</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                  <c:forEach items="${userList}" var="user">
-                      <tr>
-                        <td scope="row"></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                          <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/user/delete?user-id=${user.id}">Xóa</a></button>
-                         
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/user/edit?user-id=${user.id}">Sửa</a></button>
-                        
-                          <button class="btn btn-info"><a href="/admin/chitietbaidang.html">Xem chi tiết</a></button>
-                        </td>
-                     </tr>
-                    </c:forEach>
-                    </tbody>
-                  </table>
+                <div class="info-name">
+                    <h1>Nguyễn Hoàng Lâm </h1>
+                    <h3>IT developer</h3>
                 </div>
-              </div>
+                <div class="info-image">
+                    <img src="../admin/assets/images/anhbia2.jpg" alt="" >
+                    <h4>06/06/2000</h4>
+                </div>
+                <div class="info-introduces">
+                    <span><i class="icon-phone mr-2"> 0394086919</i></span><br>
+                    <span><i class="fa fa-mail-forward mr-2"> hoanglamdhcn@gmail.com</i></span>
+                </div>
+                <div class="info-button">
+                    <button class="btn btn-info"><a href="../admin/editthongtincanhan.html">Chỉnh sửa thông tin cá nhân</a></button>
+                         
+                    <button class="btn btn-success"><a href="">Quay lại</a></button>
+                </div>
+                <img src="../admin/assets/images/anhbia.png" alt="anhbia">
             </div>
           </div>
         </div>

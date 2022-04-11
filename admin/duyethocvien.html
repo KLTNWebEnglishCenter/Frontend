@@ -20,6 +20,36 @@
   <link href="/admin/assets/css/sidebar-menu.css" rel="stylesheet" />
   <link href="/admin/assets/css/app-style.css" rel="stylesheet" />
   
+  <style>
+    .check-style {
+      width: 20px;
+      height: 20px;
+    }
+
+    .btnLayout {
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .btnLayout button {
+      width: 100%;
+      margin-block: 10px;
+    }
+
+    .btnLayout-classroom {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .btnLayout-classroom button {
+      width: 33%;
+      margin-inline: 5px;
+    }
+  </style>
 
 </head>
 
@@ -63,6 +93,11 @@
       <li>
         <a href="/admin/giangvien.html">
           <i class="zmdi zmdi-accounts"></i> <span>Quản lí Giảng viên</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/khoahoc.html">
+          <i class="zmdi zmdi-widgets"></i> <span>Quản lí Lớp học</span>
         </a>
       </li>
       <li>
@@ -119,53 +154,116 @@
               </li>
             
               <li class="dropdown-divider"></li>
-			 <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="/admin/logout"> Đăng xuất</a></li>		
+			        <li class="dropdown-item"><i class="icon-power mr-2"></i><a href="/admin/logout"> Đăng xuất</a></li>		
             </ul>
           </li>
         </ul>
       </nav>
     </header>
     <div class="clearfix"></div>
-
+    
     <!-- Body -->
     <div class="content-wrapper">
       <div class="container-fluid">
-        <div class="row mt-3">
-         
+        <div class="row mt-3">        
           <div class="col-lg-12">
             <div class="card">
               <div class="card-body">
-                
+                <h5 class="card-title">Danh sách khóa học</h5>
+                <div class="table-responsive">
+                  <div style="display: flex;">
+                    <select class="form-control valid col-lg-10" id="input-6" name="course-catogary" required aria-invalid="false">
+                       <option value="0">--</option>
+                       <option value="1">Toeic</option>
+                    </select>
+                    <!-- th:onclick="'window.location.href = \'' + @{/deviceevent/list/{id}(id=${deviceEvent.id})} + '\''" -->
+                    <div class="form-group col-lg-1">
+                      <button class="btn btn-light" style="color: white;">Tìm kiếm</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3">        
+          <div class="col-lg-5">
+            <div class="card">
+              <div class="card-body">
                 <h5 class="card-title">Danh sách cần duyệt</h5>
                 <div class="table-responsive">
                   <table class="table table-striped">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
+                      <tr>  
+                        <th scope="col"></th>
                         <th scope="col">Tên học viên</th>
-                        <th scope="col">Tên khóa học</th>
                         <th scope="col">Ngày yêu cầu</th>
-                        <th scope="col">Học phí</th>
-                        <th scope="col">Hành động</th>
+                        <th scope="col">Học phí</th>  
                       </tr>
                     </thead>
                     <tbody>
                   <c:forEach items="${userList}" var="user">
                       <tr>
-                        <td scope="row"></td>
+                        <td><input type="checkbox" value="" class="check-style"></td>
                         <td></td>
                         <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                          <button class="btn btn-success"><a href="">Cho phép</a></button>
-                          <button class="btn btn-info"><a href="">Tự động phân phối lớp</a></button>
-                                 
-                        </td>
+                        <!-- <td>
+                          <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModal">Thêm vào lớp học</button>        
+                        </td> -->
                      </tr>
                     </c:forEach>
                     </tbody>
                   </table>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="btnLayout">
+                  <button class="btn btn-light" style="color: white;">Thêm</button>
+                  <button class="btn btn-light" style="color: white;">Thêm tất cả</button>
+                  <button class="btn btn-light" style="color: white;">Xóa</button>
+                  <button class="btn btn-light" style="color: white;">Xóa tất cả</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Danh sách lớp học</h5>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>  
+                        <th scope="col"></th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Tên lớp học</th>
+                        <th scope="col">Số lượng</th>    
+                      </tr>
+                    </thead>
+                    <tbody>
+                  <c:forEach items="${userList}" var="user">
+                      <tr>
+                        <td><input type="checkbox" value="" class="check-style"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <!-- <td>
+                          <button class="btn btn-success"  data-toggle="modal" data-target="#exampleModal">Thêm vào lớp học</button>        
+                        </td> -->
+                     </tr>
+                    </c:forEach>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="btnLayout-classroom">
+                  <button class="btn btn-success" style="color: white;">Thêm</button>
+                  <button class="btn btn-success" style="color: white;">Cập nhật</button>
+                  <button class="btn btn-success" style="color: white;">Lưu</button>
                 </div>
               </div>
             </div>
@@ -175,6 +273,25 @@
       </div>
     </div>
    <!-- Body -->
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <a href="javaScript:void();" class="back-to-top"><i class="fa fa-angle-double-up"></i> </a>
     <!-- <div class="right-sidebar">
@@ -219,6 +336,7 @@
     <script src="/admin/assets/plugins/Chart.js/Chart.min.js"></script>
     <script src="/admin/assets/js/index.js"></script>
     <script src="/admin/assets/plugins/summernote/dist/summernote-bs4.min.js"></script>
+
   </body>
   
   </html>
