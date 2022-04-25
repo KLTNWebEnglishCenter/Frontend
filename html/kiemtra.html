@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/css/footer.css" />
     <link rel="stylesheet" href="/css/tooltip.css" />
     <link rel="stylesheet" href="/css/sidebar.css" />
-    <link rel="stylesheet" href="/css/mycourse.css" />
+    <link rel="stylesheet" href="/css/exam.css">
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -100,6 +100,9 @@
             <li class="nav-item">
                 <a href="#sub" class="nav-link" id="nav-link">Liên hệ</a>
             </li>
+            <li class="nav-item">
+                <a href="/html/kiemtra.html" class="nav-link" id="nav-link">Kiểm tra trình độ</a>
+            </li>
         </ul>
         <div class="menuclick" id="menuclick" onclick="myFunction(this)">
             <div class="bar1"></div>
@@ -109,245 +112,125 @@
     </nav>
 
     <a href="#" class="cd-top">Back To Top</a>
-    <div class="myCourse">
-        <div class="myCourse-menu">
-            <h3>Danh sách khóa học đang học</h3>
-            <!-- Contenedor -->
-            <ul id="accordion" class="accordion">
-                <li>
-                    <div class="link"><i class="fa fa-database"></i>Toeic 550<i class="fa fa-chevron-down"></i></div>
-                    <ul class="submenu">
-                        <li><a href="#">A01</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+    <div class="comtainer-exam">
+        <div class="exam-header">
+            <h3 class="exam-header-title">
+                Bài kiểm tra thử
+            </h3>
+            <h4 class="exam-header-title">
+                Mã đề: 1055684228-test
+            </h4>
         </div>
-        <div class="myCourse-body">
-            <!-- display:none -->
-            <div class="my-no-choice">
-                <h3>Chọn một lớp học ...</h3>
-            </div>
-            <div class="my-choice">
-                <div class="my-choice-action">
-                    <ul>
-                        <li class="li-item choice-item"><i class="fa fa-info-circle" onclick="change(0);"></i>Thông
-                            tin</li>
-                        <li class="li-item"><i class="fa fa-bell" onclick="change(1);"></i>Thông báo</li>
-                        <li class="li-item"><i class="fa fa-calendar-alt" onclick="change(2);"></i>Lịch
-                        </li>
-                        <li class="li-item"><i class="fa fa-file" onclick="change(3);"></i>File</li>
-                    </ul>
-                </div>
-
-                <div id="showAction" class="show-my-action actives">
-                    <div class="show-my-action-body">
-                        <h2>Tên lớp học</h2>
-                        <h3>Số lượng học viên</h3>
-                        <h3>Giảng viên</h3>
-                    </div>
-                </div>
-
-                <div id="showCalendar" class="show-calendar ">
-                    <div class="row-calendar">
-                        <div class="col-calendar col-thu">
-                            <h3>#</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 2</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 3</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 4</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 5</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 6</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Thứ 7</h3>
-                        </div>
-                        <div class="col-calendar col-thu">
-                            <h3>Chủ nhật</h3>
-                        </div>
-                    </div>
-                    <div class="row-calendar p">
-                        <div class="col-calendar col-tiet">
-                            <h3>Sáng</h3>
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                    </div>
-                    <div class="row-calendar p">
-                        <div class="col-calendar col-tiet">
-                            <h3>Chiều</h3>
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                    </div>
-                    <div class="row-calendar">
-                        <div class="col-calendar col-tiet">
-                            <h3>Tối</h3>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-
-                        </div>
-                        <div class="col-calendar col-tiet">
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
-                            <div class="tiet-box">
-                                <h4>Name</h4>
-                                <h5>9.30-4.50</h5>
-                            </div>
+        <div class="exam-body">
+            <form action="" method="post">
+                <div class="exam-item">
+                    <h1 class="exam-question-index">Cau 1:</h1>
+                    <div class="exam-question-body">
+                        <p class="exam-question-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nam quasi accusantium!
+                            Neque animi ratione officia sed ullam eaque nobis tempora nulla, labore velit aliquid
+                            accusamus repudiandae excepturi voluptate minima?
+                        </p>
+                        <div class="exam-question-answer">
+                            <div><input type="radio" name="answer" id="a"
+                                    class="exam-question-result"><span>A.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="b"
+                                    class="exam-question-result"><span>B.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="c"
+                                    class="exam-question-result"><span>C.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="d"
+                                    class="exam-question-result"><span>D.</span>AnswerA</div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="exam-item">
+                    <h1 class="exam-question-index">Cau 1:</h1>
+                    <div class="exam-question-body">
+                        <p class="exam-question-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nam quasi accusantium!
+                            Neque animi ratione officia sed ullam eaque nobis tempora nulla, labore velit aliquid
+                            accusamus repudiandae excepturi voluptate minima?
+                        </p>
+                        <div class="exam-question-answer">
+                            <div><input type="radio" name="answer" id="a"
+                                    class="exam-question-result"><span>A.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="b"
+                                    class="exam-question-result"><span>B.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="c"
+                                    class="exam-question-result"><span>C.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="d"
+                                    class="exam-question-result"><span>D.</span>AnswerA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exam-item">
+                    <h1 class="exam-question-index">Cau 1:</h1>
+                    <div class="exam-question-body">
+                        <p class="exam-question-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nam quasi accusantium!
+                            Neque animi ratione officia sed ullam eaque nobis tempora nulla, labore velit aliquid
+                            accusamus repudiandae excepturi voluptate minima?
+                        </p>
+                        <div class="exam-question-answer">
+                            <div><input type="radio" name="answer" id="a"
+                                    class="exam-question-result"><span>A.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="b"
+                                    class="exam-question-result"><span>B.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="c"
+                                    class="exam-question-result"><span>C.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="d"
+                                    class="exam-question-result"><span>D.</span>AnswerA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exam-item">
+                    <h1 class="exam-question-index">Cau 1:</h1>
+                    <div class="exam-question-body">
+                        <p class="exam-question-content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia nam quasi accusantium!
+                            Neque animi ratione officia sed ullam eaque nobis tempora nulla, labore velit aliquid
+                            accusamus repudiandae excepturi voluptate minima?
+                        </p>
+                        <div class="exam-question-answer">
+                            <div><input type="radio" name="answer" id="a"
+                                    class="exam-question-result"><span>A.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="b"
+                                    class="exam-question-result"><span>B.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="c"
+                                    class="exam-question-result"><span>C.</span>AnswerA</div>
+                            <div><input type="radio" name="answer" id="d"
+                                    class="exam-question-result"><span>D.</span>AnswerA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exam-submit">
+                    <input class="exam-btn" type="submit" value="Nộp bài">
+                </div>
+                <div class="exam-submit-2">
+                    <p class="exam-submit-p">Thời gian nộp bài</p>
+                    <div class="exam-clock-down">
+                        <span id="exam-hour">00</span>
+                        <span>:</span>
+                        <span id="exam-minute" value>00</span>
+                        <span>:</span>
+                        <span id="exam-second">00</span>
+                    </div>
+                    <input class="exam-btn-2" type="submit" value="Nộp bài">
+                </div>
+            </form>
         </div>
     </div>
+
 
     <aside class="sidebar" id="menu-sidebar2">
         <div id="leftside-navigation" class="nano">
             <ul class="nano-content">
                 <li>
                     <a href="/html/managerClassroom.html"><i class="fa fa-dashboard"></i><span>Vào lớp học</span></a>
+                </li>
+                <li>
+                    <a href="/html/lamkiemtra.html"><i class="fa fa-dashboard"></i><span></span></a>
                 </li>
                 <li class="sub-menu">
                     <a href="javascript:void(0);"><i class="fa fa-cogs"></i><span>UI Elements</span><i
@@ -609,57 +492,48 @@
                 }
             }
         }
-
-        $(function () {
-            var Accordion = function (el, multiple) {
-                this.el = el || {};
-                this.multiple = multiple || false;
-
-                // Variables privadas
-                var links = this.el.find(".link");
-                // Evento
-                links.on("click", { el: this.el, multiple: this.multiple }, this.dropdown);
-            };
-
-            Accordion.prototype.dropdown = function (e) {
-                var $el = e.data.el;
-                ($this = $(this)), ($next = $this.next());
-
-                $next.slideToggle();
-                $this.parent().toggleClass("open");
-
-                if (!e.data.multiple) {
-                    $el.find(".submenu").not($next).slideUp().parent().removeClass("open");
-                }
-            };
-
-            var accordion = new Accordion($("#accordion"), false);
-        });
     </script>
     <script>
-        const a = document.getElementsByClassName("li-item")
-        const showmyaction = document.getElementById("showAction")
-        const showCalendar = document.getElementById("showCalendar")
-        function change(id) {
-            for (let i = 0; i < a.length; i++) {
-                a[i].classList.remove("choice-item")
-            }
-            a[id].classList.add("choice-item")
-            switch (id) {
-                case 0: {
-                    showCalendar.classList.remove("actives")
-                    showmyaction.classList.add("actives")
-                    break   
-                }
-                case 2: {
-                    showmyaction.classList.remove("actives")
-                    showCalendar.classList.add("actives")
-                    break
-                }
+        const hour = document.getElementById('exam-hour')
+        const minute = document.getElementById('exam-minute')
+        const second = document.getElementById('exam-second')
 
+        var hour_value = 0
+        var minute_value = 0
+        var second_value = 0
+
+        function showTimeUp() {
+            second_value++
+            if (second_value == 60) {
+                second_value = 0
+                minute_value++
+                if (minute_value == 60) {
+                    minute_value = 0
+                    hour_value++
+                    if (hour_value == 24) {
+                        hour_value = 0
+                    }
+                }
+            }
+            if (hour_value < 9) {
+                hour.innerText = '0' + hour_value
+            } else {
+                hour.innerText = hour_value
+            }
+            if (minute_value < 9) {
+                minute.innerText = '0' + minute_value
+            } else {
+                minute.innerText = minute_value
+            }
+            if (second_value < 9) {
+                second.innerText = '0' + second_value
+            } else {
+                second.innerText = second_value
             }
         }
+        setInterval(showTimeUp, 1000);
     </script>
+
 </body>
 
 </html>
